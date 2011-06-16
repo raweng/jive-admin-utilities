@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="custom-utilities" namespace="/admin" extends="community-actions">
+
+        <action name="clear-caches" class="com.raweng.ClearCachesAction">
+            <result name="input">/plugins/utilities/resources/clear-caches.ftl</result>
+            <result name="success">/plugins/utilities/resources/clear-caches.ftl</result>
+        </action>
+
+        <action name="update-doc-expiry" class="com.raweng.UpdateDocExpirationAction">
+            <result name="input">/plugins/utilities/resources/update-doc-expiry.ftl</result>
+            <result name="success">/plugins/utilities/resources/update-doc-expiry.ftl</result>
+        </action>
+
+        <action name="change-doc-state" class="com.raweng.ChangeDocStateAction">
+            <result name="input">/plugins/utilities/resources/change-doc-state.ftl</result>
+            <result name="success">/plugins/utilities/resources/change-doc-state.ftl</result>
+        </action>
+
+        <action name="change-doc-author" class="com.raweng.ChangeDocAuthorAction">
+            <result name="input">/plugins/utilities/resources/change-doc-author.ftl</result>
+            <result name="success">/plugins/utilities/resources/change-doc-author.ftl</result>
+        </action>
+
+        <action name="rename-tag" class="com.raweng.RenameTag">
+            <result name="input">/plugins/utilities/resources/rename-tag.ftl</result>
+            <result name="success">/plugins/utilities/resources/rename-tag.ftl</result>
+        </action>
+
+    </package>
+
+</struts>
