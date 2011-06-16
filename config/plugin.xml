@@ -1,0 +1,31 @@
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.jivesoftware.com/schemas/clearspace/1_1/plugin.xsd">
+    <name>utilities</name>
+    <description>Publish Expired Document or Expire publish document, Clear Document Cache, Change document Expiration Months, Rename Tag</description>
+    <author>Raw Eng</author>
+    <version>1.0.0</version>
+    <minServerVersion>2.0</minServerVersion>
+    <class>com.raweng.UtilitiesPlugin</class> 
+
+    <components>
+        <component id="admin-console">
+            <tab id="tab-utilities" name="Utilities" url="clear-caches.jspa"
+             description="Additional utilities">
+                <section id="section-utilities" name="Settings">
+                    <item id="clear-caches" url="clear-caches.jspa" name="Clear Document Caches"
+        	        description="clear caches of document" />
+                    <item id="update-doc-expiry" url="update-doc-expiry.jspa" name="Change Document Expiration Date"
+        	        description="Update Document expiration" />
+                    <item id="change-doc-state" url="change-doc-state.jspa" name="Change Document State"
+        	        description="Change Document State" />
+                    <item id="change-doc-author" url="change-doc-author.jspa" name="Change Document Author"
+        	        description="Change author of document" />
+                    <item id="rename-tag" url="rename-tag.jspa" name="Rename Tag"
+        	        description="Rename Tag" />
+                </section>
+             </tab>            
+
+        </component>
+        
+     </components>
+</plugin>

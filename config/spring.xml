@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd"
+       default-autowire="no" default-init-method="init" default-destroy-method="destroy">
+
+    <bean id="utilitiesDao" class="com.jiveSoftware.base.database.dao.UtilitiesDao">
+        <property name="dataSource">
+            <util:property-path path="dataSourceFactory.dataSource"/>
+        </property>
+    </bean>
+
+    <bean id="utilitiesPlugin" class="com.raweng.UtilitiesPlugin">
+    </bean>
+
+    <bean id="renameTagDao" class="com.jiveSoftware.base.database.dao.RenameTagDao">
+        <property name="dataSource">
+            <util:property-path path="dataSourceFactory.dataSource"/>
+        </property>
+    </bean>
+
+    <bean id="clearCache" class="com.raweng.ClearCache">
+        <property name="tagCache" ref="tagCache"/>
+        <property name="tagIDCache" ref="tagIDCache"/>
+        <property name="tagContentCache" ref="tagContentCache"/>
+        <property name="tagCloudCache" ref="tagCloudCache"/>
+    </bean>
+
+</beans>
